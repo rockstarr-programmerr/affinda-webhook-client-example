@@ -14,8 +14,9 @@
     <li>
       <strong>Event:</strong> {{ webhook.event }},
       <strong>timestamp:</strong> {{ webhook.timestamp }},
-      <strong>payload:</strong> {{ webhook.payload|truncatechars:100 }}</li>
-    {% empty %}
+      <strong>payload:</strong> {{ webhook.payload }}</li>
+      {% comment %} <strong>payload:</strong> {{ webhook.payload|truncatechars:100 }}</li> {% endcomment %}
+      {% empty %}
     <li>Nothing yet</li>
     {% endfor %}
   </ul>
